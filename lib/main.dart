@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:fluttericon/font_awesome_icons.dart';
 import 'package:fluttericon/iconic_icons.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:fluttericon/elusive_icons.dart';
 import 'package:instagram_clone/screens/explore.dart';
 import 'package:instagram_clone/screens/feed.dart';
@@ -23,7 +22,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: GoogleFonts.montserrat().fontFamily,
       ),
       home: InstagramClone(),
     );
@@ -76,6 +74,7 @@ class _InstagramCloneState extends State<InstagramClone> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         backgroundColor: Color(0xff000000),
+        iconSize: 22,
         unselectedItemColor: Colors.white70,
         selectedItemColor: Colors.white,
         type: BottomNavigationBarType.fixed,

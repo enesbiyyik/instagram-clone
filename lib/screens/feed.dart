@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:fluttericon/font_awesome_icons.dart';
+import 'package:instagram_clone/components/post.dart';
 
 class Feed extends StatefulWidget {
   Feed({Key key}) : super(key: key);
@@ -52,7 +53,15 @@ class _FeedState extends State<Feed> {
                   ),
                 )
               ],
-            )
+            ),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  Post(),
+                  Post(),
+                ],
+              ),
+            ),
           ],
         ),
       ),
