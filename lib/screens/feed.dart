@@ -23,7 +23,7 @@ class _FeedState extends State<Feed> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 16.0, top: 8.0),
+                  padding: const EdgeInsets.only(left: 16.0, top: 8, bottom: 8),
                   child: Container(
                     height: 35,
                     child: Image.asset("assets/instagram_logo.png"),
@@ -37,7 +37,7 @@ class _FeedState extends State<Feed> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         IconButton(
-                          icon: Icon(Icons.add_box_outlined, color: Colors.white,), 
+                          icon: Icon(FontAwesome.plus_squared_alt, color: Colors.white,), 
                           onPressed: (){},
                         ),
                         IconButton(
@@ -54,12 +54,14 @@ class _FeedState extends State<Feed> {
                 )
               ],
             ),
-            SingleChildScrollView(
-              child: Column(
-                children: [
-                  Post(),
-                  Post(),
-                ],
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Post(),
+                    Post(),
+                  ],
+                ),
               ),
             ),
           ],
